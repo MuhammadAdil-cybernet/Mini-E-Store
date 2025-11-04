@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Store</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Css/E-store.css" />
+
+    <!-- Fonts Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- animation link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section Start -->
+    <header class="header-section">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light animate__animated animate__flipInX"
+        id="header-section"
+      >
+        <div class="container-fluid">
+          <!-- Logo with spacing control in CSS -->
+          <a class="navbar-brand" href="#">
+            <img src="./Pics/main-logo.png" alt="E-Store Logo" width="120" />
+          </a>
+          <!-- Button for mobile menu toggle -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Navigation links with equal spacing -->
+          <div class="collapse navbar-collapse ms-auto" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto d-flex" style="gap: 1.5rem">
+              <!-- Each list item will have equal gap using CSS 'gap' property -->
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-bolder"
+                  aria-current="page"
+                  href="#main-section"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bolder" href="#services-section"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bolder" href="#mobile-products"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bolder" href="#watches-section"
+                  >Watches</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bolder" href="#yearly-sale">Sale</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bolder" href="#latest-posts">Blogs</a>
+              </li>
+              <!-- Dropdown -->
+              <li class="nav-item dropdown fw-bolder">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  More
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <li>
+                    <a class="dropdown-item text-uppercase" href="#Feedback"
+                      >Customer Feedback</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-uppercase" href="#Subscribe-Us"
+                      >Subscribe Us</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      class="dropdown-item text-uppercase"
+                      href="#Social-Account"
+                      >Social Account</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-uppercase" href="#Subscribe-Us"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- Icons section (example) -->
+          <div class="navbar-icons d-flex align-items-center">
+            <a href="#" class="me-3"><i class="fas fa-user"></i></a>
+            <a href="#" class="me-3"><i class="fas fa-heart"></i></a>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Main section here -->
+    <main class="main-section" id="main-section">
+      <div class="hero-image d-flex flex-row align-items-center text-center">
+        <img
+          src="./Pics/banner-image.png"
+          alt="Banner Image"
+          class="img-fluid w-50"
+        />
+        <div class="hero-text">
+          <h1 class="display-4 fw-bold animate__animated animate__flipInX">
+            Welcome to E-Store
+          </h1>
+          <p class="lead">Your one-stop shop for all your needs!</p>
+          <a href="#mobile-products" class="btn btn-primary btn-lg"
+            >Shop Now <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services Section -->
+      <div class="services-section mx-3 my-3 p-5" id="services-section">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col">
+              <div
+                class="card slide-btn h-100 text-center"
+                style="width: 13rem"
+              >
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Free Shipping <i class="fa-solid fa-truck"></i>
+                  </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">On all orders</h6>
+                  <p class="card-text">
+                    Enjoy free shipping on all orders over $50. Shop now and
+                    save!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div
+                class="card slide-btn h-100 text-center"
+                style="width: 13rem"
+              >
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Quality guarantee <i class="fa-solid fa-check"></i>
+                  </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">best quality</h6>
+                  <p class="card-text">
+                    Enjoy quality guarantee on all products. Shop now and save!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div
+                class="card slide-btn h-100 text-center"
+                style="width: 13rem"
+              >
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Daily offers <i class="fa-solid fa-tags"></i>
+                  </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Up to 30% off selected items — today only
+                  </h6>
+                  <p class="card-text">
+                    Enjoy daily offers on all products. Shop now and save!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div
+                class="card slide-btn h-100 text-center"
+                style="width: 13rem"
+              >
+                <div class="card-body">
+                  <h5 class="card-title">
+                    100% secure payment <i class="fa-solid fa-lock"></i>
+                  </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">secure payment</h6>
+                  <p class="card-text">
+                    Enjoy secure payment options on all orders. Shop now and
+                    save!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- services section end -->
+
+      <!-- Mobile Products Section -->
+      <div class="container my-5">
+        <!-- Section Heading -->
+        <h2 class="text-uppercase fw-bold px-5" id="mobile-products">
+          Mobile Products
+        </h2>
+
+        <div class="row justify-content-center">
+          <!-- Product Card 1 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3">
+            <!-- Each card -->
+            <div class="card product-card h-100">
+              <!-- Product Image -->
+              <img
+                src="./Pics/product-item4.jpg"
+                class="card-img-top"
+                alt="Mobile 1"
+              />
+              <span
+                class="position-absolute translate-middle badge rounded-pill bg-danger"
+                style="top: 15px; left: 85%"
+              >
+                20% OFF
+              </span>
+              <!-- Product Details -->
+              <div class="card-body text-center">
+                <h5 class="card-title fw-semibold">iPhone 13</h5>
+                <p class="card-text">
+                  A high-performance iPhone 13 with a sleek design and advanced
+                  features.
+                </p>
+              </div>
+              <button type="button" class="btn btn-primary position-relative">
+                ORDER NOW
+              </button>
+              <!-- <button type="button" class="btn btn-danger">ORDER NOW</button> -->
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3">
+            <div class="card product-card h-100">
+              <img
+                src="./Pics/product-item3.jpg"
+                class="card-img-top"
+                alt="Mobile 2"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title fw-semibold">iPhone 14</h5>
+                <p class="card-text">
+                  A high-performance iPhone 14 with a sleek design and advanced
+                  features.
+                </p>
+              </div>
+              <button type="button" class="btn btn-danger">ORDER NOW</button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3">
+            <div class="card product-card h-100">
+              <img
+                src="./Pics/product-item2.jpg"
+                class="card-img-top"
+                alt="Mobile 2"
+              />
+              <span
+                class="position-absolute translate-middle badge rounded-pill bg-danger"
+                style="top: 15px; left: 85%"
+              >
+                20% OFF
+              </span>
+              <div class="card-body text-center">
+                <h5 class="card-title fw-semibold">iPhone 15</h5>
+                <p class="card-text">
+                  A high-performance iPhone 15 with a sleek design and advanced
+                  features.
+                </p>
+              </div>
+              <button type="button" class="btn btn-danger">ORDER NOW</button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3">
+            <div class="card product-card h-100">
+              <img
+                src="./Pics/product-item1.jpg"
+                class="card-img-top"
+                alt="Mobile 2"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title fw-semibold">iPhone 16</h5>
+                <p class="card-text">
+                  A high-performance iPhone 16 with a sleek design and advanced
+                  features.
+                </p>
+              </div>
+              <button type="button" class="btn btn-danger position-relative">
+                ORDER NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- section end -->
+
+      <!-- Watches Section -->
+      <div class="container my-5" id="watches-section">
+        <!-- Section Heading -->
+        <h2 class="text-uppercase fw-bold px-5">Smart Watches</h2>
+
+        <div class="row justify-content-center">
+          <!-- Product Card 1 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3">
+            <!-- Each card -->
+            <div class="card product-card h-100">
+              <!-- Product Image -->
+              <img
+                src="./Pics/singel-product-item.jpg"
+                class="card-img-top"
+                alt="Mobile 1"
+              />
+              <span
+                class="position-absolute translate-middle badge rounded-pill bg-danger"
+                style="top: 15px; left: 85%"
+              >
+                20% OFF
+              </span>
+              <!-- Product Details -->
+              <div class="card-body text-center">
+                <h5 class="card-title fw-semibold text-uppercase">
+                  Pink Watch
+                </h5>
+                <p class="card-text">
+                  A stylish pink watch with a sleek design and advanced
+                  features.
+                </p>
+              </div>
+              <button type="button" class="btn btn-primary position-relative">
+                ORDER NOW
+              </button>
+              <!-- <button type="button" class="btn btn-danger">ORDER NOW</button> -->
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3">
+            <div class="card product-card h-100">
+              <img
+                src="./Pics/product-item7.jpg"
+                class="card-img-top"
+                alt="Mobile 2"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title fw-semibold text-uppercase">
+                  heavy watch
+                </h5>
+                <p class="card-text">
+                  A high-performance heavy watch with a sleek design and
+                  advanced features.
+                </p>
+              </div>
+              <button type="button" class="btn btn-danger">ORDER NOW</button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3">
+            <div class="card product-card h-100">
+              <img
+                src="./Pics/product-item8.jpg"
+                class="card-img-top"
+                alt="Mobile 2"
+              />
+              <span
+                class="position-absolute translate-middle badge rounded-pill bg-danger"
+                style="top: 15px; left: 85%"
+              >
+                30% OFF
+              </span>
+              <div class="card-body text-center">
+                <h5 class="card-title fw-semibold text-uppercase">
+                  spotted watch
+                </h5>
+                <p class="card-text">
+                  A high-performance spotted watch with a sleek design and
+                  advanced features.
+                </p>
+              </div>
+              <button type="button" class="btn btn-danger">ORDER NOW</button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3">
+            <div class="card product-card h-100">
+              <img
+                src="./Pics/product-item9.jpg"
+                class="card-img-top"
+                alt="Mobile 2"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title fw-semibold text-uppercase">
+                  black watch
+                </h5>
+                <p class="card-text">
+                  A high-performance black watch with a sleek design and
+                  advanced features.
+                </p>
+              </div>
+              <button type="button" class="btn btn-danger position-relative">
+                ORDER NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- section end -->
+
+      <!-- yearly sales section -->
+      <section
+        id="yearly-sale"
+        class="bg-light-blue overflow-hidden py-5 my-5"
+        style="
+          background-image: url('Pics/waves.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 700px;
+        "
+      >
+        <div class="row d-flex flex-wrap align-items-center">
+          <div class="col-md-6 col-sm-12">
+            <div class="text-content offset-4 padding-medium">
+              <h3 class="text-white">10% off</h3>
+              <h2 class="display-2 pb-5 text-uppercase text-white fw-bold">
+                New year sale
+              </h2>
+              <a
+                href="#mobile-products"
+                class="btn btn-medium btn-dark text-uppercase btn-rounded-none"
+                >Shop Sale</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12"></div>
+        </div>
+      </section>
+      <!-- section ends -->
+
+      <!-- Latest Posts -->
+      <div class="container my-5" id="latest-posts">
+        <!-- Section Heading -->
+        <h2 class="text-uppercase fw-bold px-5">Latest Posts</h2>
+
+        <div class="row justify-content-center">
+          <!-- Post Card 1 -->
+          <div class="col-12 col-sm-4 col-md-5 col-lg-3 my-3">
+            <div class="card post-card h-100">
+              <img
+                src="./Pics/post-item1.jpg"
+                class="card-img-top"
+                alt="Blog Post 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">
+                  Get some cool gadgets in 2023
+                </h5>
+                <p class="card-text">
+                  Discover the best of 2024 with our comprehensive review.
+                </p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Post Card 2 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3">
+            <div class="card post-card h-100">
+              <img
+                src="./Pics/post-item2.jpg"
+                class="card-img-top"
+                alt="Blog Post 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">
+                  Technology Hack You Won't Get Elsewhere.
+                </h5>
+                <p class="card-text">
+                  Make technology simpler and smarter for you.
+                </p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- post card 3 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3">
+            <div class="card post-card h-100">
+              <img
+                src="./Pics/post-item3.jpg"
+                class="card-img-top"
+                alt="Blog Post 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">
+                  Top 10 Small Camera In The World
+                </h5>
+                <p class="card-text">
+                  From compact designs to high-quality features for photography.
+                  <a href="#" class="btn btn-primary my-3">Read More</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- feedback section start -->
+      <section class="feedback-section bg-light py-5 my-5" id="Feedback">
+        <div class="container">
+          <h2 class="text-uppercase fw-bold text-center mb-4">
+            Customer Feedback <i class="fa-solid fa-ribbon"></i>
+          </h2>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="card p-4 customer-feedback">
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    src="./Pics/commentor-item1.jpg"
+                    alt="Customer 1"
+                    class="rounded-circle me-3"
+                    width="60"
+                    height="60"
+                  />
+                  <div>
+                    <h5 class="mb-0">John Doe</h5>
+                    <small class="text-muted">Verified Buyer</small>
+                  </div>
+                </div>
+                <p class="mb-0">
+                  "Great products and excellent customer service! Highly
+                  recommend E-Store for all your shopping needs."
+                </p>
+              </div>
+            </div>
+
+            <!-- 2nd feedback -->
+            <div class="col-md-8">
+              <div class="card p-4 customer-feedback">
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    src="./Pics/commentor-item2.jpg"
+                    alt="Customer 1"
+                    class="rounded-circle me-3"
+                    width="60"
+                    height="60"
+                  />
+                  <div>
+                    <h5 class="mb-0">Jane Smith</h5>
+                    <small class="text-muted">Verified Buyer</small>
+                  </div>
+                </div>
+                <p class="mb-0">
+                  "I had an amazing experience shopping at E-Store! The products
+                  are top-notch and the delivery was prompt."
+                </p>
+              </div>
+            </div>
+
+            <!-- 3rd feedback -->
+            <div class="col-md-8">
+              <div class="card p-4 customer-feedback">
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    src="./Pics/commentor-item3.jpg"
+                    alt="Customer 1"
+                    class="rounded-circle me-3"
+                    width="60"
+                    height="60"
+                  />
+                  <div>
+                    <h5 class="mb-0">Johny</h5>
+                    <small class="text-muted">Verified Buyer</small>
+                  </div>
+                </div>
+                <p class="mb-0">
+                  "I had an amazing experience shopping at E-Store! ."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section ends -->
+
+      <!-- Subscribe Us Now -->
+      <section id="Subscribe-Us">
+        <div
+          class="container my-5 py-5 bg-dark text-white rounded-3 text-center"
+        >
+          <h2 class="text-uppercase fw-bold text-center mb-4">
+            Subscribe Us Now <i class="fa-solid fa-thumbs-up"></i>
+          </h2>
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="name@example.com"
+                required
+                style="width: 200px; justify-self: center"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </section>
+      <!-- section ends -->
+
+      <!--Follow Us on Insta -->
+      <section id="Social-Account">
+        <div
+          class="container my-3 py-3 bg-white text-dark rounded-3 text-center d-flex flex-column align-items-center"
+        >
+          <h2 class="text-uppercase fw-bold mb-4">
+            Shop Our Instagram <i class="fa-brands fa-instagram"></i>
+          </h2>
+          <p class="lead">
+            Follow us on Instagram for the latest updates and exclusive offers!
+          </p>
+          <div class="container my-3">
+            <div class="row justify-content-center">
+              <!-- Post Card 1 -->
+              <div class="col-12 col-sm-4 col-md-5 col-lg-3 my-1">
+                <div class="card post-card h-100">
+                  <img
+                    src="./Pics/post-item1.jpg"
+                    class="card-img-top"
+                    alt="Blog Post 1"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title fw-semibold">
+                      Get some cool gadgets in 2023
+                    </h5>
+                    <p class="card-text">
+                      Discover the best of 2024 with our comprehensive review.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Post Card 2 -->
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-1">
+                <div class="card post-card h-100">
+                  <img
+                    src="./Pics/post-item2.jpg"
+                    class="card-img-top"
+                    alt="Blog Post 1"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title fw-semibold">
+                      Technology Hack You Won't Get Elsewhere.
+                    </h5>
+                    <p class="card-text">
+                      Make technology simpler and smarter for you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- post card 3 -->
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-1">
+                <div class="card post-card h-100">
+                  <img
+                    src="./Pics/post-item3.jpg"
+                    class="card-img-top"
+                    alt="Blog Post 1"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title fw-semibold">
+                      Top 10 Small Camera In The World
+                    </h5>
+                    <p class="card-text">
+                      From compact designs to high-quality features for
+                      photography.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-primary">Follow Us</a>
+        </div>
+      </section>
+      <!-- section ends -->
+
+      <!-- Footer Section Here -->
+      <div class="Footer-section">
+        <footer class="bg-dark text-white text-center py-4">
+          <p class="mb-0">
+            &copy; 2024 E-Store. All rights reserved. Designed by E-Store Team.
+          </p>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-facebook-f"></i>
+        </footer>
+      </div>
+      <!-- section ends -->
+    </main>
+    <!-- Bootstrap JS Bundle  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
