@@ -59,37 +59,41 @@
               <!-- Each list item will have equal gap using CSS 'gap' property -->
               <li class="nav-item">
                 <a
-                  class="nav-link fw-bolder"
+                  class="nav-link fw-bolder slide-btn"
                   aria-current="page"
                   href="#main-section"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-bolder" href="#services-section"
+                <a class="nav-link fw-bolder slide-btn" href="#services-section"
                   >Services</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-bolder" href="#mobile-products"
+                <a class="nav-link fw-bolder slide-btn" href="#mobile-products"
                   >Products</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-bolder" href="#watches-section"
+                <a class="nav-link fw-bolder slide-btn" href="#watches-section"
                   >Watches</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-bolder" href="#yearly-sale">Sale</a>
+                <a class="nav-link fw-bolder slide-btn" href="#yearly-sale"
+                  >Sale</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-bolder" href="#latest-posts">Blogs</a>
+                <a class="nav-link fw-bolder slide-btn" href="#latest-posts"
+                  >Blogs</a
+                >
               </li>
               <!-- Dropdown -->
               <li class="nav-item dropdown fw-bolder">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle slide-btn"
                   href="#"
                   id="navbarDropdownMenuLink"
                   role="button"
@@ -153,7 +157,7 @@
             Welcome to E-Store
           </h1>
           <p class="lead">Your one-stop shop for all your needs!</p>
-          <a href="#mobile-products" class="btn btn-primary btn-lg"
+          <a href="#mobile-products" class="btn btn-primary btn-lg shop-btn"
             >Shop Now <i class="fa-solid fa-cart-shopping"></i>
           </a>
         </div>
@@ -270,11 +274,13 @@
                   A high-performance iPhone 13 with a sleek design and advanced
                   features.
                 </p>
+                <button
+                  type="button"
+                  class="btn btn-primary shop-btn position-relative"
+                >
+                  ORDER NOW
+                </button>
               </div>
-              <button type="button" class="btn btn-primary position-relative">
-                ORDER NOW
-              </button>
-              <!-- <button type="button" class="btn btn-danger">ORDER NOW</button> -->
             </div>
           </div>
 
@@ -292,8 +298,10 @@
                   A high-performance iPhone 14 with a sleek design and advanced
                   features.
                 </p>
+                <button type="button" class="btn btn-primary shop-btn">
+                  ORDER NOW
+                </button>
               </div>
-              <button type="button" class="btn btn-danger">ORDER NOW</button>
             </div>
           </div>
 
@@ -317,8 +325,10 @@
                   A high-performance iPhone 15 with a sleek design and advanced
                   features.
                 </p>
+                <button type="button" class="btn btn-primary shop-btn">
+                  ORDER NOW
+                </button>
               </div>
-              <button type="button" class="btn btn-danger">ORDER NOW</button>
             </div>
           </div>
 
@@ -336,10 +346,13 @@
                   A high-performance iPhone 16 with a sleek design and advanced
                   features.
                 </p>
+                <button
+                  type="button"
+                  class="btn btn-primary shop-btn position-relative"
+                >
+                  ORDER NOW
+                </button>
               </div>
-              <button type="button" class="btn btn-danger position-relative">
-                ORDER NOW
-              </button>
             </div>
           </div>
         </div>
@@ -373,14 +386,17 @@
                 <h5 class="card-title fw-semibold text-uppercase">
                   Pink Watch
                 </h5>
-                <p class="card-text">
+                <p class="card-text" style="margin-bottom: 92px">
                   A stylish pink watch with a sleek design and advanced
                   features.
                 </p>
+                <button
+                  type="button"
+                  class="btn btn-primary shop-btn position-relative"
+                >
+                  ORDER NOW
+                </button>
               </div>
-              <button type="button" class="btn btn-primary position-relative">
-                ORDER NOW
-              </button>
               <!-- <button type="button" class="btn btn-danger">ORDER NOW</button> -->
             </div>
           </div>
@@ -401,8 +417,10 @@
                   A high-performance heavy watch with a sleek design and
                   advanced features.
                 </p>
+                <button type="button" class="btn btn-primary shop-btn">
+                  ORDER NOW
+                </button>
               </div>
-              <button type="button" class="btn btn-danger">ORDER NOW</button>
             </div>
           </div>
 
@@ -428,8 +446,10 @@
                   A high-performance spotted watch with a sleek design and
                   advanced features.
                 </p>
+                <button type="button" class="btn btn-primary shop-btn">
+                  ORDER NOW
+                </button>
               </div>
-              <button type="button" class="btn btn-danger">ORDER NOW</button>
             </div>
           </div>
 
@@ -449,10 +469,13 @@
                   A high-performance black watch with a sleek design and
                   advanced features.
                 </p>
+                <button
+                  type="button"
+                  class="btn btn-primary shop-btn position-relative"
+                >
+                  ORDER NOW
+                </button>
               </div>
-              <button type="button" class="btn btn-danger position-relative">
-                ORDER NOW
-              </button>
             </div>
           </div>
         </div>
@@ -480,7 +503,7 @@
               </h2>
               <a
                 href="#mobile-products"
-                class="btn btn-medium btn-dark text-uppercase btn-rounded-none"
+                class="btn btn-dark text-uppercase btn-rounded-none btn-primary shop-btn"
                 >Shop Sale</a
               >
             </div>
@@ -511,7 +534,7 @@
                 <p class="card-text">
                   Discover the best of 2024 with our comprehensive review.
                 </p>
-                <a href="#" class="btn btn-primary">Read More</a>
+                <a href="#" class="btn btn-primary shop-btn mx-3">Read More</a>
               </div>
             </div>
           </div>
@@ -530,7 +553,7 @@
                 <p class="card-text">
                   Make technology simpler and smarter for you.
                 </p>
-                <a href="#" class="btn btn-primary">Read More</a>
+                <a href="#" class="btn btn-primary shop-btn mx-3">Read More</a>
               </div>
             </div>
           </div>
@@ -548,7 +571,9 @@
                 </h5>
                 <p class="card-text">
                   From compact designs to high-quality features for photography.
-                  <a href="#" class="btn btn-primary my-3">Read More</a>
+                  <a href="#" class="btn btn-primary shop-btn mx-3"
+                    >Read More</a
+                  >
                 </p>
               </div>
             </div>
@@ -564,7 +589,7 @@
           </h2>
           <div class="row justify-content-center">
             <div class="col-md-8">
-              <div class="card p-4 customer-feedback">
+              <div class="card p-4 my-3 slide-feedback-btn">
                 <div class="d-flex align-items-center mb-3">
                   <img
                     src="./Pics/commentor-item1.jpg"
@@ -587,7 +612,7 @@
 
             <!-- 2nd feedback -->
             <div class="col-md-8">
-              <div class="card p-4 customer-feedback">
+              <div class="card p-4 slide-feedback-btn my-3">
                 <div class="d-flex align-items-center mb-3">
                   <img
                     src="./Pics/commentor-item2.jpg"
@@ -610,7 +635,7 @@
 
             <!-- 3rd feedback -->
             <div class="col-md-8">
-              <div class="card p-4 customer-feedback">
+              <div class="card p-4 slide-feedback-btn my-3">
                 <div class="d-flex align-items-center mb-3">
                   <img
                     src="./Pics/commentor-item3.jpg"
@@ -654,7 +679,9 @@
                 style="width: 200px; justify-self: center"
               />
             </div>
-            <button type="submit" class="btn btn-primary">Subscribe</button>
+            <button type="submit" class="btn btn-primary shop-btn">
+              Subscribe
+            </button>
           </form>
         </div>
       </section>
@@ -731,7 +758,7 @@
             </div>
           </div>
 
-          <a href="#" class="btn btn-primary">Follow Us</a>
+          <a href="#" class="btn btn-primary shop-btn">Follow Us</a>
         </div>
       </section>
       <!-- section ends -->

@@ -1,139 +1,27 @@
-/* Default styles for all elements */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.header-section {
-  position: sticky;
-  top: 0; /* Stick to the top */
-  z-index: 1000; /* Ensure it stays above other content */
-}
-/* Navbar */
-/* Center everything neatly and add equal spacing */
-.header-section .navbar {
-  padding: 0.8rem 2rem; /* Equal padding top/bottom and sides */
-}
 
-/* Make sure the logo isn't squished to the left */
-.navbar-brand {
-  margin-right: 2rem; /* Adds space between logo and links */
-}
+/* my css button effect */
 
-/* Space out the links evenly */
-.navbar-nav {
-  gap: 1.5rem; /* Adds equal space between each nav item */
-}
-
-/* Center items vertically */
-.navbar .container-fluid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Optional: Give icons some breathing room if you add them */
-.navbar-nav .nav-item i {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-/* Make the links stand out slightly on hover */
-.navbar-nav .nav-link:hover {
-  color: #ff0000;
-  transition: color 0.3s ease;
-}
-/* Navbar icons styles */
-.navbar-link a {
-  background-color: rgb(0, 26, 255);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-}
-.navbar-link a:hover {
-  background-color: rgb(255, 0, 0);
-  color: white;
-}
-
-/* Navbar link styles */
-.nav-link {
+.slide-btn {
   color: #000000; /* Default text color (black) */
   position: relative; /* Required so ::before can position itself relative to the button */
   overflow: hidden; /* Hides anything (like the ::before) that moves outside the button area */
   transition: color 0.4s; /* Smooth color change when hovering */
   padding: 10px 20px; /* Inner spacing for the button */
-  background: transparent; /* Transparent background initially */
   font-size: 16px; /* Text size */
   cursor: pointer; /* Makes cursor a pointer on hover */
+  border: none; /* remove any border Bootstrap adds */
+  outline: none; /* remove focus outline (visually) */
   z-index: 1; /* Ensures button text stays above the pseudo-element (::before) */
-}
-
-/* The magic layer: pseudo-element before the button’s text */
-.nav-link::before {
-  content: ""; /* Creates an empty pseudo-element */
-  position: absolute; /* Position it absolutely inside the button */
-  inset: 0; /* Shortcut for top:0; right:0; bottom:0; left:0; */
-  background: rgb(0, 80, 185); /* The slide color (red) */
-  transform: translateY(
-    100%
-  ); /* Moves it completely *below* the button (hidden) */ /* Moves it completely *below* the button (hidden) */
-  transition: transform 0.5s; /* Smooth sliding animation */
-  z-index: -1; /* Keeps this layer *behind* the button text */
-}
-
-/* When user hovers over the button */
-.nav-link a:hover {
-  color: rgb(
-    255,
-    255,
-    255
-  ); /* Text color stays readable when background slides up */
-}
-
-/* Hover animation for the background layer */
-.nav-link:hover::before {
-  transform: translateY(
-    0
-  ); /* Moves the pseudo-element up into view → looks like sliding up */
-}
-
-/* .navbar-icons a styles */
-.navbar-icons a {
-  color: rgb(0, 0, 255);
-  transition: all 0.4s ease-in-out;
-}
-.navbar-icons a:hover {
-  color: rgb(255, 0, 0);
-}
-
-/* Main section styles */
-.btn {
-  background-color: rgb(0, 26, 255);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-}
-.btn:hover {
-  background-color: rgb(255, 0, 0);
-  color: white;
-}
-
-/* Card section styles */
-.slide-btn {
-  color: #000000; /* Default text color (black) */
-  border: 1px solid #000000; /* Simple black border */
-  position: relative; /* Required so ::before can position itself relative to the button */
-  overflow: hidden; /* Hides anything (like the ::before) that moves outside the button area */
-  transition: color 0.6s; /* Smooth color change when hovering */
-  padding: 10px 20px; /* Inner spacing for the button */
-  background: transparent; /* Transparent background initially */
-  font-size: 16px; /* Text size */
-  cursor: pointer; /* Makes cursor a pointer on hover */
-  z-index: 1; /* Ensures button text stays above the pseudo-element (::before) */
+  background: transparent;
+  margin: auto;
+  border-radius: 0; /* optional — keeps button edges sharp */
+  box-shadow: none; /* removes fake border effect */
 }
 
 /* The magic layer: pseudo-element before the button’s text */
@@ -141,11 +29,12 @@
   content: ""; /* Creates an empty pseudo-element */
   position: absolute; /* Position it absolutely inside the button */
   inset: 0; /* Shortcut for top:0; right:0; bottom:0; left:0; */
-  background: rgb(0, 80, 185); /* The slide color (red) */
+  background: rgb(255, 0, 0); /* The slide color (yellowish) */
+  color: rgb(255, 255, 255);
   transform: translateY(
     100%
-  ); /* Moves it completely *below* the button (hidden) */ /* Moves it completely *below* the button (hidden) */
-  transition: transform 0.6s; /* Smooth sliding animation */
+  ); /* Moves it completely *below* the button (hidden) */
+  transition: transform 0.4s; /* Smooth sliding animation */
   z-index: -1; /* Keeps this layer *behind* the button text */
 }
 
@@ -164,74 +53,39 @@
     0
   ); /* Moves the pseudo-element up into view → looks like sliding up */
 }
+/* ends */
 
-/* mobile screen css */
+/* my css 2nd button effect */
 
-.container {
-  max-width: 1200px;
-}
-
-/* Card styling for consistent design */
-.product-card {
-  width: 100%; /* Makes card full width inside its column */
-  max-width: 280px; /* Optional: limit max width for uniformity */
-  height: 380px; /* Set fixed height for consistency */
-  margin: auto; /* Centers card in its column */
-  border: none;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Add smooth hover animation */
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
-}
-
-/* Image sizing inside the card */
-.product-card img {
-  height: 300px; /* Image height */
-  object-fit: cover; /* Ensures the image fills area without distortion */
-  border-bottom: 2px solid #eee;
-}
-
-/* Title styling */
-.product-card .card-title {
-  font-size: 1.1rem;
-  color: #333;
-}
-
-/* Description styling */
-.product-card .card-text {
-  font-size: 0.9rem;
-  color: #666;
-}
-/* customer feedback */
-.customer-feedback {
-  color: #000000; /* Default text color (black) */
+.shop-btn {
+  color: #ffffff; /* Default text color (black) */
   position: relative; /* Required so ::before can position itself relative to the button */
   overflow: hidden; /* Hides anything (like the ::before) that moves outside the button area */
-  transition: color 0.6s; /* Smooth color change when hovering */
-  font-size: 16px; /* Text size */
+  transition: color 0.4s; /* Smooth color change when hovering */
   cursor: pointer; /* Makes cursor a pointer on hover */
+  border: 1px; /* remove any border Bootstrap adds */
   z-index: 1; /* Ensures button text stays above the pseudo-element (::before) */
+  margin: auto;
+  border-radius: 1; /* optional — keeps button edges sharp */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* adds subtle shadow */
 }
 
-/* The magic layer: pseudo-element before the button’s text */
-.customer-feedback::before {
+/* The magic layer: pseudo-element before the button's text */
+.shop-btn::before {
   content: ""; /* Creates an empty pseudo-element */
   position: absolute; /* Position it absolutely inside the button */
   inset: 0; /* Shortcut for top:0; right:0; bottom:0; left:0; */
-  background: rgb(144, 0, 0); /* The slide color (red) */
-  transform: translateX(-100%); /* Moves it completely *from left*/
-  transition: transform 0.6s; /* Smooth sliding animation */
+  background: rgb(255, 0, 0); /* The slide color (yellowish) */
+  color: rgb(255, 255, 255);
+  transform: translateY(
+    100%
+  ); /* Moves it completely *below* the button (hidden) */
+  transition: transform 0.4s; /* Smooth sliding animation */
   z-index: -1; /* Keeps this layer *behind* the button text */
 }
 
 /* When user hovers over the button */
-.customer-feedback:hover {
+.shop-btn:hover {
   color: rgb(
     255,
     255,
@@ -240,32 +94,261 @@
 }
 
 /* Hover animation for the background layer */
-.customer-feedback:hover::before {
+.shop-btn:hover::before {
   transform: translateY(
     0
   ); /* Moves the pseudo-element up into view → looks like sliding up */
 }
-/* footer */
+/* ends */
+
+/* my 3rd css button effect */
+
+.slide-feedback-btn {
+  color: #000000; /* Default text color (black) */
+  position: relative; /* Required so ::before can position itself relative to the button */
+  overflow: hidden; /* Hides anything (like the ::before) that moves outside the button area */
+  transition: color 0.4s; /* Smooth color change when hovering */
+  padding: 10px 20px; /* Inner spacing for the button */
+  font-size: 16px; /* Text size */
+  cursor: pointer; /* Makes cursor a pointer on hover */
+  border: none; /* remove any border Bootstrap adds */
+  outline: none; /* remove focus outline (visually) */
+  z-index: 1; /* Ensures button text stays above the pseudo-element (::before) */
+  background: transparent;
+  margin: auto;
+  border-radius: 0; /* optional — keeps button edges sharp */
+  box-shadow: none; /* removes fake border effect */
+}
+
+/* The magic layer: pseudo-element before the button’s text */
+.slide-feedback-btn::before {
+  content: ""; /* Creates an empty pseudo-element */
+  position: absolute; /* Position it absolutely inside the button */
+  inset: 0; /* Shortcut for top:0; right:0; bottom:0; left:0; */
+  background: rgb(255, 0, 0); /* The slide color (yellowish) */
+  color: rgb(255, 255, 255);
+  transform: translateX(
+    -100%
+  ); /* Moves it completely *below* the button (hidden) */
+  transition: transform 0.4s; /* Smooth sliding animation */
+  z-index: -1; /* Keeps this layer *behind* the button text */
+}
+
+/* When user hovers over the button */
+.slide-feedback-btn:hover {
+  color: rgb(
+    255,
+    255,
+    255
+  ); /* Text color stays readable when background slides up */
+}
+
+/* Hover animation for the background layer */
+.slide-feedback-btn:hover::before {
+  transform: translateX(
+    0
+  ); /* Moves the pseudo-element up into view → looks like sliding up */
+}
+/* ends */
+
+/* Make sure site adjusts properly on small screens */
+body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+}
+
+/* Navbar spacing fix */
+.header-section .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px); /* gives a glass effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: top 0.4s ease; /* smooth show/hide animation */
+}
+
+/* Make sure container elements have some breathing space */
+.container,
+.container-fluid {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Hero Section: adjust layout for mobile */
+.hero-image {
+  flex-wrap: wrap; /* Stack image and text vertically on smaller screens */
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%; /* Full width on mobile */
+  max-width: 450px;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 1.8rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Product cards only */
+.product-card {
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Consistent spacing */
+section,
+.container {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Feedback and Subscribe sections spacing */
+.feedback-section,
+#Subscribe-Us,
+#Social-Account {
+  padding: 2rem 1rem;
+}
+
+/* Footer icons */
 .Footer-section i {
-  margin-top: 15px;
-  font-size: 20px;
+  margin: 0 10px;
 }
 
-.Footer-section i:hover {
-  color: red;
-  transform: translateY(-3px);
-  transition: all 0.4s ease-in-out;
-}
+/* ===================== */
+/* RESPONSIVE DESIGN ZONE */
+/* ===================== */
 
-/* Responsive tweaks for small screens */
+/* Small devices (portrait phones) */
 @media (max-width: 576px) {
+  /* Navbar */
+  .navbar-brand img {
+    width: 100px; /* Smaller logo */
+  }
+
+  .navbar-nav {
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  /* Cards */
   .product-card {
-    max-width: 90%; /* Use more space on small screens */
-    height: auto; /* Allow flexible height for smaller viewports */
+    max-width: 95%;
+    height: auto;
+    margin-bottom: 1rem;
   }
 
   .product-card img {
-    height: 180px; /* Slightly smaller image for mobile */
+    height: 200px;
+    object-fit: cover;
+  }
+
+  /* Service cards */
+  .services-section .card {
+    width: 100% !important;
+    margin: 10px auto;
+  }
+
+  /* Yearly sale section: make text centered and reduce height */
+  #yearly-sale {
+    height: auto !important;
+    background-size: cover;
+    text-align: center;
+  }
+
+  #yearly-sale .text-content {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  /* Feedback section */
+  .feedback-section .card {
+    margin-bottom: 1rem;
+  }
+
+  /* Subscribe form centered */
+  #Subscribe-Us form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #Subscribe-Us input {
+    width: 80% !important;
+  }
+
+  /* Social section */
+  #Social-Account .card {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  /* Footer text */
+  footer p {
+    font-size: 0.9rem;
   }
 }
-/* END */
+
+/* Medium devices (landscape phones/tablets) */
+@media (max-width: 768px) {
+  .hero-image {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  .navbar-icons a {
+    margin: 0 5px;
+  }
+
+  /* Cards */
+  .product-card {
+    max-width: 80%;
+  }
+
+  /* Services layout */
+  .services-section .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-section .col {
+    margin-bottom: 1rem;
+  }
+
+  /* Sale section */
+  #yearly-sale .text-content {
+    text-align: center;
+    padding: 2rem;
+  }
+}
+
+/* Larger tablets / small laptops */
+@media (max-width: 992px) {
+  .navbar-nav {
+    gap: 1rem;
+  }
+
+  .product-card img {
+    height: 250px;
+  }
+}
+/* end */
